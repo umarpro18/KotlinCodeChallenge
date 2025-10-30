@@ -3,8 +3,22 @@ package com.igorwojda.integer.factorial
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+fun main() {
+    println("factorial of the number: ${factorial(5)}")
+
+}
 private fun factorial(n: Int): Int {
-    TODO("not implemented")
+    /*var value = 1
+    for(i in 1 until n + 1) {
+        value *= i
+    }
+    return value*/
+
+    var total = 1
+    (1 until n + 1).forEach {
+        total *= it
+    }
+    return total
 }
 
 private class Test {

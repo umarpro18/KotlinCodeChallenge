@@ -3,8 +3,11 @@ package com.igorwojda.integer.getodd
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+fun main() {
+    println(filterOdd(listOf(1,2,2,3,4,5,6,7,8,9,0,10,12,14,45,23,67,55,34,89,78)))
+}
 private fun filterOdd(list: List<Int>): List<Int> {
-    TODO("not implemented")
+    return list.filter {it % 2 != 0}
 }
 
 private class Test {

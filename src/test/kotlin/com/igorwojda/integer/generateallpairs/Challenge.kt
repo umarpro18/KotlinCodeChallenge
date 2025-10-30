@@ -3,8 +3,17 @@ package com.igorwojda.integer.generateallpairs
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+fun main() {
+    getAllPairs(10)
+}
 private fun getAllPairs(n: Int): List<Pair<Int, Int>> {
-    TODO("not implemented")
+    val listPairValue = arrayListOf<Pair<Int, Int>>()
+    (0 until n + 1).forEach { i ->
+        (0 until n + 1).forEach { j ->
+            listPairValue.add(i to j)
+        }
+    }
+    return listPairValue
 }
 
 private class Test {

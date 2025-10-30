@@ -2,9 +2,17 @@ package com.igorwojda.list.capitalizeFirst
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
+import java.util.*
 
+fun main() {
+    capitalizeFirst(listOf("umar"))
+}
 private fun capitalizeFirst(list: List<String>): List<String> {
-    TODO("not implemented")
+    val capsList = mutableListOf<String>()
+    list.forEach { it ->
+        capsList.add(it.substring(0).replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() })
+    }
+    return capsList
 }
 
 private class Test {

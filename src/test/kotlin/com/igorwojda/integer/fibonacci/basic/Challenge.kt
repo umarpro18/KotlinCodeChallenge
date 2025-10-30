@@ -3,8 +3,36 @@ package com.igorwojda.integer.fibonacci.basic
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+fun main() {
+    println(fibonacci(10))
+}
+/*private fun fibonacci(n: Int): Int {
+
+    if (n < 2) {
+        return n
+    }
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}*/
+
 private fun fibonacci(n: Int): Int {
-    TODO("not implemented")
+    if (n < 2) {
+        return n
+    }
+
+    var first = 0
+    var second = 1
+    var current = 0
+
+    (2..n).forEach {
+        println("it value --> $n")
+        current = first + second
+        first = second
+        second = current
+        println("it current value --> $current")
+    }
+
+    return current
 }
 
 private class Test {

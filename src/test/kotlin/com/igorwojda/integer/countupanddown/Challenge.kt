@@ -3,8 +3,20 @@ package com.igorwojda.integer.countupanddown
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+fun main() {
+    println("Result ${countUpAndDown(5)}")
+}
 private fun countUpAndDown(n: Int): List<Int> {
-    TODO("not implemented")
+    val resultList = arrayListOf<Int>()
+
+    /*for (i in 0 until n) {
+        resultList.add(i)
+    }*/
+
+    for (i in n downTo 0) {
+        resultList.add(i)
+    }
+    return (0 until n) + (n downTo 0)
 }
 
 private class Test {

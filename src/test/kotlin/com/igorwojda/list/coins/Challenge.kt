@@ -3,8 +3,31 @@ package com.igorwojda.list.coins
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+
+fun main() {
+    println(getCoins(4, listOf(1, 2)))
+}
+
 private fun getCoins(amount: Int, coins: List<Int>): Int {
-    TODO("not implemented")
+    //4
+    //1, 2, 3
+    var result = 0
+    coins.forEach {
+        if (it == 1) {
+            for (i in 0 until amount) {
+                result += it
+            }
+            return result
+        }
+        for (j in it downTo 1) {
+            val coin = it
+            val finalResult: Int = coin + j
+            if (finalResult == amount) {
+                return finalResult
+            }
+        }
+    }
+    return 0
 }
 
 private class Test {

@@ -3,8 +3,16 @@ package com.igorwojda.list.countuniquevalues
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+fun main() {
+    println("Size is ${countUniqueValues(listOf(4, 3))}")
+}
 private fun countUniqueValues(list: List<Int>): Int {
-    TODO("not implemented")
+    val uniqueList = mutableListOf<Int>()
+    for (i in list) {
+        println(i)
+        if (!uniqueList.contains(i)) uniqueList.add(i)
+    }
+    return uniqueList.size
 }
 
 private class Test {
