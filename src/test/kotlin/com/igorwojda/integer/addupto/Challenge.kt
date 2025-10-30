@@ -12,6 +12,8 @@ private fun addUpTo(n: Int): Int {
         totalSum += i
         println("loop: $i § $totalSum")
     }
+
+    // test
     /*for(i in n downTo 1) {
         totalSum += i
         println("loop: $i § $totalSum")
