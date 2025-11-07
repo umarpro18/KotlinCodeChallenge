@@ -22,7 +22,7 @@ them:
 ## Examples
 
 ```kotlin
-val s = new Stack()
+val s = Stack()
 s.add(1)
 s.add(2)
 s.remove() // 2

@@ -14,11 +14,30 @@ private fun factorial(n: Int): Int {
     }
     return value*/
 
-    var total = 1
+    /*var total = 1
     (1 until n + 1).forEach {
         total *= it
+    }*/
+
+    var result = 1
+
+    /*for (num in n downTo 1) {
+        println(num)
+        result *= num
+    }*/
+
+    repeat(n) {
+        println(it)
+        if(it != 0) result *= it+1
     }
-    return total
+
+    return result
+
+    //return total
+
+    //for loop
+
+    //forEach, for(n in num), for(n in 1 until num), for(n in num downTo 0), repeat(n) { it -> }
 }
 
 private class Test {
