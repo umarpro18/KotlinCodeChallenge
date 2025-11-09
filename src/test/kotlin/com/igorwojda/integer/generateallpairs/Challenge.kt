@@ -6,14 +6,18 @@ import org.junit.jupiter.api.Test
 fun main() {
     getAllPairs(10)
 }
+
 private fun getAllPairs(n: Int): List<Pair<Int, Int>> {
-    val listPairValue = arrayListOf<Pair<Int, Int>>()
-    (0 until n + 1).forEach { i ->
-        (0 until n + 1).forEach { j ->
-            listPairValue.add(i to j)
+    val pairedList: MutableList<Pair<Int, Int>> = mutableListOf()
+    (0 until n).forEach { i ->
+        // for every i
+        (0 until n).forEach { j ->
+            // take every j and attach
+            pairedList.add(Pair(i, j))
         }
     }
-    return listPairValue
+    println(pairedList)
+    return pairedList
 }
 
 private class Test {

@@ -16,23 +16,19 @@ fun main() {
 }*/
 
 private fun fibonacci(n: Int): Int {
-    if (n < 2) {
-        return n
-    }
-
     var first = 0
     var second = 1
-    var current = 0
+    val listItems: MutableList<Int> = mutableListOf<Int>(first, second)
 
-    (2..n).forEach {
-        println("it value --> $n")
-        current = first + second
+    if (n == 0) return 0
+    (2 until n).forEach { _ ->
+        val next = first + second
+        listItems.add(next)
         first = second
-        second = current
-        println("it current value --> $current")
+        second = next
     }
-
-    return current
+    println("fib list --> $listItems")
+    return listItems.sum()
 }
 
 private class Test {

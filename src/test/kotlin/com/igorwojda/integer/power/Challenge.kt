@@ -4,7 +4,14 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun power(base: Int, exponent: Int): Int {
-    TODO("not implemented")
+    // loop through the exponent and multiply the result variable with base that many times and return
+    var result = 1
+    if (base == 0) return 0
+    for (power in 0 until exponent) {
+        println("loop data:$power  $result")
+        result *= base
+    }
+    return result
 }
 
 private class Test {

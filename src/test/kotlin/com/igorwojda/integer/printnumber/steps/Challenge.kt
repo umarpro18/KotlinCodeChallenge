@@ -3,8 +3,17 @@ package com.igorwojda.integer.printnumber.steps
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
-private fun printNumber(n: Int, step: Int = 1): List<Int> {
-    TODO("not implemented")
+private fun printNumber(n: Int, step: Int): List<Int> {
+    // Use a while loop, that helps to reduce via step while iterating with the reduced value
+    if (n == 0) return emptyList()
+    val resultList: MutableList<Int> = mutableListOf<Int>()
+    var current = n
+    while(current > 0) {
+        println(current)
+        resultList.add(current)
+        current -= step
+    }
+    return resultList
 }
 
 private class Test {

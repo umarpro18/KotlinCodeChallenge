@@ -22,7 +22,7 @@ private fun fizzBuzz(n: Int): List<String> {
         }
     }*/
 
-    (1 until n +1).forEach {
+    /*(1 until n +1).forEach {
         val item  = when {
             (it % 3 == 0 && it % 5 == 0) -> { "FizzBuzz" }
             (it % 3 == 0) -> { "Fizz" }
@@ -30,9 +30,18 @@ private fun fizzBuzz(n: Int): List<String> {
             else -> { it.toString() }
         }
         fizzBuzzList.add(item)
-    }
+    }*/
 
-    return fizzBuzzList
+    for (i in n   downTo 1) {
+        val item = when {
+            (i % 3 == 0 && i % 5 == 0) -> { "FizzBuzz" }
+            (i % 3 == 0) -> { "Fizz" }
+            (i % 5 == 0) -> { "Buzz" }
+            else -> { i.toString() }
+        }
+        fizzBuzzList.add(item)
+    }
+    return fizzBuzzList.reversed()
 }
 
 private class Test {
