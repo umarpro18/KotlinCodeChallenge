@@ -31,6 +31,17 @@ private fun processMap(data: String): MutableMap<String, Int> {
     return counterMap
 }
 
+
+private fun sortWithFreq(inputList: List<Int>): List<Int> {
+    val countFreq: MutableMap<Int, Int> = mutableMapOf<Int, Int>()
+
+    for (num in inputList) {
+        countFreq[num] = (countFreq[num] ?: 0) + 1
+    }
+
+    return emptyList()
+}
+
 private class Test {
     @Test
     fun `'789' and '897' have the same digit frequency`() {

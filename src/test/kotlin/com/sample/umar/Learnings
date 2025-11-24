@@ -1,0 +1,6 @@
+Need to learn:
+* HashMap internals and collections in general
+	•	What is hash collision and Why hash collisions are rare
+	•	How HashSet avoids duplicates
+	•	Big-O cheat sheet for Kotlin collections
+

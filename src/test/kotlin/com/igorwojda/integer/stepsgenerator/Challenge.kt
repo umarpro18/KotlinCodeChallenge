@@ -4,7 +4,29 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 fun generateSteps(n: Int): List<String> {
-    TODO("not implemented")
+    val result: MutableList<String> = mutableListOf<String>()
+    //val str = "#"
+    //val spacer = " "
+    /*for (i in 1 .. n) {
+        result.add((str.repeat(i)) + spacer.repeat(n - i))
+    }
+    println(result)*/
+    // Without repeat, we need a total of three loops: 1. exact n times (rows), 2. for no. of "#", 3. for space (n - i)
+
+    for (i in 1 .. n) {
+        var str = ""
+        var storeSpacer = ""
+        val spacer = " "
+        for (j in 1 .. i) {
+            str += "#"
+            (j .. (n - i)).forEach {
+                storeSpacer += spacer
+            }
+        }
+        result.add(str + storeSpacer)
+    }
+    println(result)
+    return result
 }
 
 private class Test {
