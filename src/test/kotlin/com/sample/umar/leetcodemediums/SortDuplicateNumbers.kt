@@ -14,8 +14,29 @@ fun sortDuplicateNumbers(inputList: List<Int>): List<Int> {
         mapFreq[it] = (mapFreq[it] ?: 0) + 1
     }
     // Sort the keys into a list using manual method
-    //val sortedkeys = mapFreq.keys.sorted()
-    val sortedKeys = sortKeys(mapFreq.keys.toMutableList())
+    //val sortedkeys = mapFreq.keys.sorted() // timsort
+    //val sortedKeys = sortKeys(mapFreq.keys.toMutableList())
+
+    fun sortKeysInline(): List<Int> {
+        val keys = mapFreq.keys.toMutableList()
+        // Use swap technique, check neighbouring elements one after the other and swap in-place
+        for (i in 0 until keys.size) {
+            //It marks the position where the smallest remaining number should go.
+            var minIndex = i
+            for (j in i + 1 until keys.size) {
+                if (keys[j] < keys[minIndex]) {
+                    minIndex = j
+                }
+            }
+            val temp = keys[i]
+            keys[i] = keys[minIndex]
+            keys[minIndex] = temp
+        }
+        return keys
+    }
+
+    val sortedKeys = sortKeysInline()
+
 
     sortedKeys.forEach { key ->
         // add sorted list with duplicates
@@ -44,3 +65,4 @@ fun sortKeys(inputList: MutableList<Int>): List<Int> {
     }
     return sortedList
 }
+
