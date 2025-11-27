@@ -14,8 +14,8 @@ fun sortDuplicateNumbers(inputList: List<Int>): List<Int> {
         mapFreq[it] = (mapFreq[it] ?: 0) + 1
     }
     // Sort the keys into a list using manual method
-    //val sortedkeys = mapFreq.keys.sorted() // timsort
-    //val sortedKeys = sortKeys(mapFreq.keys.toMutableList())
+    //val sortedkeys = mapFreq.keys.sorted() // timsort o(n log n)
+    //val sortedKeys = sortKeys(mapFreq.keys.toMutableList()) o(n2) due to nested loops
 
     fun sortKeysInline(): List<Int> {
         val keys = mapFreq.keys.toMutableList()

@@ -5,7 +5,7 @@ fun main() {
 }
 
 /*
-    .  Return the count of unique elements in a sorted array
+    .  Return the count of unique elements in a sorted array in-place
 	•	slow → points to where next unique value should be written
 	•	fast → scans the full list
 	->  space and time is o(1) and o(n)

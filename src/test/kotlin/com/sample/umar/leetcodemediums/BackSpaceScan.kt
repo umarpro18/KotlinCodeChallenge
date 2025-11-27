@@ -59,6 +59,7 @@ fun backSpaceCharEquality(str1: String, str2: String): Boolean {
 	    • You stop on the next valid letter
 	2.	Move j left same way.
 	3.	Compare the valid characters at i and j.
-	4.	If mismatch → return false.
-	5.	If both reach past the beginning → return true.
+	4.	Else If mismatch in size → return false.
+	5.  Else decrement both the pointers
+	6.	If both reach past the beginning → return true.
  */
