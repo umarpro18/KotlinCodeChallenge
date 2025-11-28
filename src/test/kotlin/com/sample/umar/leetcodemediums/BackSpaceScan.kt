@@ -4,7 +4,7 @@ package com.sample.umar.leetcodemediums
 // return true if both strings are equal after applying backspaces.
 //# means delete the previous character.
 fun main() {
-    println(backSpaceCharEquality("ab#c", "ad#c"))
+    println(backSpaceCharEquality("ab#c", "add#c"))
 }
 
 // Use the two-pointer backward approach "It’s faster and more optimal"
