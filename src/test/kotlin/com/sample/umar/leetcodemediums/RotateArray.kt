@@ -7,7 +7,7 @@ fun main() {
 // Given an array, rotate it to the right by k steps.
 // Reverse method steps, since it is in-place and o(1) space and o(n) time
 fun rotateArray(inputList: MutableList<Int>, step: Int): List<Int> {
-    //normalise the k (reduces the number of rotations that produce same result)
+    //normalise the k (reduces the number of rotations which produce same result)
     val k = step % inputList.size
 
     fun reverse(startIndex: Int, endIndex: Int) {

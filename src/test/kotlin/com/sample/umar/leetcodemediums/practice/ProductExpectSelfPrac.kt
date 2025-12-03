@@ -34,3 +34,33 @@ fun productExpectSelf(inputList: List<Int>): List<Int> {
  * and combine them in a single result array.
  * Time O(n), space O(1) without extra result array
  */
+
+fun test2ProductExpectSelf(inputList: List<Int>): List<Int> {
+    // declare a result list prefilled with defaults same as input list size
+    // we will do product the left and right side of list elements expect the current
+    val resultList = MutableList(inputList.size) { 1 }
+
+    // Use two vars to store default before we start the product once left and then do the right with the arrived result, prefix to left and suffix to right
+    var prefix = 1
+    var suffix = 1
+
+    // from left
+    for (i in 0 until inputList.size) {
+        resultList[i] = prefix
+        prefix *= inputList[i]
+    }
+
+    // from right
+    for (i in inputList.size - 1 downTo 0) {
+        resultList[i] *= suffix
+        suffix *= inputList[i]
+    }
+
+    return resultList
+}
+
+/**
+ * 	•	resultList with 1s
+ * 	•	prefix for cumulative product from the left
+ * 	•	suffix for cumulative product from the right
+ */

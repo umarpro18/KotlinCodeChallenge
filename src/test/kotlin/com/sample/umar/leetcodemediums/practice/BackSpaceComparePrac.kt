@@ -77,7 +77,7 @@ fun backSpaceCompare(str1: String, str2: String): Boolean {
 	    • You skip all characters that should be removed
 	    • You stop on the next valid letter: break
 	2.	Move j left same way.
-	3.	Compare the valid characters at i and j.
+	3.	Compare the valid characters at i and j if mismatch return false.
 	4.	Else If mismatch in size → return false.
 	5.  Else decrement both the pointers
 	6.	If both reach past the beginning → return true.

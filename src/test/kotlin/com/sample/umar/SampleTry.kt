@@ -43,6 +43,7 @@ private fun createEmptyTempFile(fileName: String?, contentType: String?) {
     } catch (e: IOException) {
         println("Security exception occurred: ${e.message}")
     }
+
 }
 
 private fun getFileNamePrefix(fileName: String?): String {

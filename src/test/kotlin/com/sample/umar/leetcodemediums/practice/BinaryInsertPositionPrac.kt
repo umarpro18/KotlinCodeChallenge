@@ -4,7 +4,7 @@ package com.sample.umar.leetcodemediums.practice
  * Given a sorted list of integers and a target value, return the index where the target should be inserted.
  * Requirements:
  * 	•	Use binary search
- * 	•	O(log n) time
+ * 	•	O(log n) time (Anything we divide)
  * 	•	O(1) space
  * 	•	If target exists → return its index
  * 	•	If not → return the index where it should be inserted

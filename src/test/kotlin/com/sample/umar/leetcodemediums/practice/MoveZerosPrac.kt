@@ -14,6 +14,7 @@ package com.sample.umar.leetcodemediums.practice
     // Use in-place method with a slow and fast pointer. o(1) space
     1. slow pointer to index/put the nonzero value
     2. fast to scan the input list
+    3. Finally, move the zeros to the last by using slow value and check against the inputList.size
  */
 
 
@@ -46,6 +47,7 @@ fun moveZeroInPlace(inputList: MutableList<Int>): List<Int> {
         }
     }
 
+    // New move the zeroes to the right
     while (slow < inputList.size) {
         inputList[slow] = 0
         slow++
