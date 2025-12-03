@@ -20,8 +20,6 @@ fun main() {
 }
 
 fun minOperationsToMakeEqual(A: String, B: String): Int {
-    if (A.length != B.length) return -1
-
     var count01 = 0
     var count10 = 0
 
@@ -29,6 +27,5 @@ fun minOperationsToMakeEqual(A: String, B: String): Int {
         if (A[i] == '0' && B[i] == '1') count01++
         if (A[i] == '1' && B[i] == '0') count10++
     }
-
-    return if (count01 == count10) count01 else -1
+    return maxOf(count01, count10)
 }
